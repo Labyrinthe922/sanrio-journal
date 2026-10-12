@@ -1,0 +1,3 @@
+import {useState} from 'react';import {NavLink,Link} from 'react-router-dom';
+const links=[['/','首页'],['/characters','角色图鉴'],['/planet','角色星球'],['/about','关于三丽鸥'],['/share','分享故事']];
+export default function Navbar(){const[open,setOpen]=useState(false);return <header className="navbar"><Link className="wordmark" to="/" onClick={()=>setOpen(false)}>SANRIO <i>JOURNAL</i><small>A LITTLE WORLD OF HAPPINESS</small></Link><button className="menu-toggle" aria-label={open?'收起导航菜单':'打开导航菜单'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?'收起':'菜单'} <span>☰</span></button><nav className={open?'nav-links is-open':'nav-links'}>{links.map(([path,label])=><NavLink key={path} to={path} end={path==='/'} onClick={()=>setOpen(false)}>{label}</NavLink>)}</nav></header>}
