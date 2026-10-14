@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 12;
   left: 20px;
-  bottom: 26px;
+  bottom: 25vh;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -96,7 +96,7 @@
 @media (max-width: 760px) {
   .floating-actions {
     left: 12px;
-    bottom: 16px;
+    bottom: 25vh;
     gap: 6px;
   }
 
