@@ -1,0 +1,118 @@
+.floating-actions {
+  position: fixed;
+  z-index: 12;
+  left: 20px;
+  bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.floating-action {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 1px solid #e3d9d4;
+  border-radius: 15px;
+  background: #fffdfa;
+  color: #554950;
+  box-shadow: 0 5px 18px #372c291c;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.floating-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px #372c2926;
+}
+
+.floating-story {
+  background: #f7e9e8;
+  border-color: #ebd5d4;
+}
+
+.floating-game {
+  background: #eee9f6;
+  border-color: #ded5ed;
+}
+
+.floating-action-icon {
+  height: 23px;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.tetris-mark {
+  --tetris-cell: 7px;
+  --tetris-gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(3, var(--tetris-cell));
+  grid-template-rows: repeat(2, var(--tetris-cell));
+  gap: var(--tetris-gap);
+}
+
+.tetris-mark i {
+  display: block;
+  border-radius: 2px;
+}
+
+.tetris-mark i:nth-child(1) {
+  grid-column: 2;
+  grid-row: 1;
+  background: #e9bbc0;
+}
+
+.tetris-mark i:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+  background: #8ebad2;
+}
+
+.tetris-mark i:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+  background: #82ad9a;
+}
+
+.tetris-mark i:nth-child(4) {
+  grid-column: 3;
+  grid-row: 2;
+  background: #a899ce;
+}
+
+.floating-action:focus-visible {
+  outline: 2px solid #b97c83;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .floating-actions {
+    left: 12px;
+    bottom: 16px;
+    gap: 6px;
+  }
+
+  .floating-action {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    font-size: 10px;
+  }
+
+  .floating-action-icon {
+    height: 19px;
+    font-size: 20px;
+  }
+
+  .tetris-mark-launcher {
+    --tetris-cell: 6px;
+  }
+}
